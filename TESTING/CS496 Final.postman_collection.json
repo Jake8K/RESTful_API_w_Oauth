@@ -1,0 +1,1412 @@
+{
+	"info": {
+		"name": "CS496 Final",
+		"_postman_id": "3f82e41a-39d3-9df8-37b4-b537067ea26c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add a  client without a user token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"post with no user token: code 403\"] = responseCode.code === 403;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Guy\",\n\t\"city\":\"Atlanta\",\n\t\"age\":29\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/clients",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Client 1 for user 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"user1's client1 added: code 200\"] = responseCode.code === 200;",
+							"",
+							"body = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user1_client1\",body.id);",
+							"",
+							"tests[\"verify name\"] = body.name === \"Jason\";",
+							"tests[\"verify age\"] = body.age === 44;",
+							"tests[\"verify city\"] = body.city === \"Sacramento\";",
+							"tests[\"verify recurring client status\"] = body.recurring_client === false;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "id_token",
+						"value": "{{user1_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Jason\",\n\t\"city\":\"Sacramento\",\n\t\"age\": 44\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/clients",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add CLient 2 for user 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"user1_client2 added: code 200\"] = responseCode.code === 200;",
+							"",
+							"body = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user1_client2\",body.id);",
+							"",
+							"tests[\"verify name\"] = body.name === \"Steve\";",
+							"tests[\"verify city\"] = body.city === \"Las Vegas\";",
+							"tests[\"verify age\"] = body.age === 24;",
+							"tests[\"verify recurring client status\"] = body.recurring_client === false;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/jso"
+					},
+					{
+						"key": "id_token",
+						"value": "{{user1_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Steve\",\n\t\"city\":\"Las Vegas\",\n\t\"age\":24\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/clients",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make user 1's client 1 a recurring client",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"make user 1 client 1 a recurring client: code 204\"] = responseCode.code === 204;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user1_token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"recurring_client\": true\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/clients/{{user1_client1}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients",
+						"{{user1_client1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all of user 1's clients",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"returned both clients: code 200\"] = responseCode.code === 200;",
+							"",
+							"body = JSON.parse(responseBody);",
+							"",
+							"tests[\"contains user 1's client 1\"] = responseBody.has(environment.user1_client1);",
+							"tests[\"contains user 1's client 2\"] = responseBody.has(environment.user1_client2);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user1_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/clients",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get client 1 from user 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"returned client 1 for user 1: code 200\"] = responseCode.code === 200;",
+							"",
+							"body = JSON.parse(responseBody);",
+							"",
+							"tests[\"returned user1 person1\"] = body.id === environment.user1_client1;",
+							"tests[\"verify user 1's client 1 name\"] = body.name === \"Jason\";",
+							"tests[\"verify user 1's client 1 age\"] = body.age === 44;",
+							"tests[\"verify user 1's client 1 city\"] = body.city === \"Sacramento\";",
+							"tests[\"verify user 1's client 1 recurring status\"] = body.recurring_client === true;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user1_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/clients/{{user1_client1}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients",
+						"{{user1_client1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Client 1 for user 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"user1's client1 added: code 200\"] = responseCode.code === 200;",
+							"",
+							"body = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user2_client1\",body.id);",
+							"",
+							"tests[\"verify name\"] = body.name === \"Jordan\";",
+							"tests[\"verify age\"] = body.age === 22;",
+							"tests[\"verify city\"] = body.city === \"Jamestown\";",
+							"tests[\"verify recurring client status\"] = body.recurring_client === false;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "id_token",
+						"value": "{{user2_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Jordan\",\n\t\"city\":\"Jamestown\",\n\t\"age\": 22\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/clients",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add client 2 for user 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"user1_client2 added: code 200\"] = responseCode.code === 200;",
+							"",
+							"body = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user2_client2\",body.id);",
+							"",
+							"tests[\"verify name\"] = body.name === \"Joseph\";",
+							"tests[\"verify city\"] = body.city === \"San Diego\";",
+							"tests[\"verify age\"] = body.age === 25;",
+							"tests[\"verify recurring client status\"] = body.recurring_client === false;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/jso"
+					},
+					{
+						"key": "id_token",
+						"value": "{{user2_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Joseph\",\n\t\"city\":\"San Diego\",\n\t\"age\":25\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/clients",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make user 2's client 2 a recurring client",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"make user 2 client 2 a recurring client: code 204\"] = responseCode.code === 204;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user2_token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"recurring_client\": true\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/clients/{{user2_client2}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients",
+						"{{user2_client2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all of user 2's clients",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"returned both clients: code 200\"] = responseCode.code === 200;",
+							"",
+							"body = JSON.parse(responseBody);",
+							"",
+							"tests[\"contains user 2's client 1\"] = responseBody.has(environment.user2_client1);",
+							"tests[\"contains user 2's client 2\"] = responseBody.has(environment.user2_client2);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user2_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/clients",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get client 2 from user 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"returned user 2's client 2: code 200\"] = responseCode.code === 200;",
+							"",
+							"body = JSON.parse(responseBody);",
+							"",
+							"tests[\"returned user1 person1\"] = body.id === environment.user2_client2;",
+							"tests[\"verify user 2's client 2 name\"] = body.name === \"Joseph\";",
+							"tests[\"verify user 2's client 2 age\"] = body.age === 25;",
+							"tests[\"verify user 2's client 2 city\"] = body.city === \"San Diego\";",
+							"tests[\"verify user 2's client 2 recurring status\"] = body.recurring_client === true;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user2_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/clients/{{user2_client2}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients",
+						"{{user2_client2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a dog without a user token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"post with no user token: code 403\"] = responseCode.code === 403;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ruffus\",\n\t\"owner\": \"{{user1_clien1}}\",\n\t\"age\":\"2\",\n\t\"gender\":\"m_n\",\n\t\"breed\": \"pitbul\",\n\t\"appointment\": \"Wednesday Evening\"\n\t\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/dogs",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"dogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a dog to user1's client 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"new dog created: code 200\"] = responseCode.code === 200;",
+							"",
+							"body = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user1_client1_dog1\",body.id);",
+							"",
+							"tests[\"verify owner\"] = body.owner === environment.user1_client1;",
+							"tests[\"verify name\"] = body.name === \"Ruffus\";",
+							"tests[\"verify age\"] = body.age === 2;",
+							"tests[\"verify gender\"] = body.gender === \"m_n\";",
+							"tests[\"verify breed\"] = body.breed === \"pitbul\";",
+							"tests[\"verify appointment\"] = body.appointment === \"Wednesday Evening\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "id_token",
+						"value": "{{user1_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ruffus\",\n\t\"owner\": \"{{user1_client1}}\",\n\t\"age\":2,\n\t\"gender\":\"m_n\",\n\t\"breed\": \"pitbul\",\n\t\"appointment\": \"Wednesday Evening\"\n\t\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/dogs",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"dogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a  second dog to user1's client 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"new dog created: code 200\"] = responseCode.code === 200;",
+							"",
+							"body = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user1_client1_dog2\",body.id);",
+							"",
+							"tests[\"verify owner\"] = body.owner === environment.user1_client1;",
+							"tests[\"verify name\"] = body.name === \"Cookie\";",
+							"tests[\"verify age\"] = body.age === 1;",
+							"tests[\"verify gender\"] = body.gender === \"f_s\";",
+							"tests[\"verify breed\"] = body.breed === \"pitbul-mix\";",
+							"tests[\"verify appointment\"] = body.appointment === \"Wednesday Evening\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "id_token",
+						"value": "{{user1_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Cookie\",\n\t\"owner\": \"{{user1_client1}}\",\n\t\"age\":1,\n\t\"gender\":\"f_s\",\n\t\"breed\": \"pitbul-mix\",\n\t\"appointment\": \"Wednesday Evening\"\n\t\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/dogs",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"dogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a dog to user2's client 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"new dog created: code 200\"] = responseCode.code === 200;",
+							"",
+							"body = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user2_client2_dog1\",body.id);",
+							"",
+							"tests[\"verify owner\"] = body.owner === environment.user2_client2;",
+							"tests[\"verify name\"] = body.name === \"Chomper\";",
+							"tests[\"verify age\"] = body.age === 5;",
+							"tests[\"verify gender\"] = body.gender === \"m_i\";",
+							"tests[\"verify breed\"] = body.breed === \"Chihuauha\";",
+							"tests[\"verify appointment\"] = body.appointment === null;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "id_token",
+						"value": "{{user2_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Chomper\",\n\t\"owner\": \"{{user2_client2}}\",\n\t\"age\":5,\n\t\"gender\":\"m_i\",\n\t\"breed\": \"Chihuauha\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/dogs",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"dogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Make an appointment for user2's client2's dog",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Make An appointment for a dog: code 204\"] = responseCode.code === 204;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user2_token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"appointment\": \"Weekday Mornings\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/dogs/{{user2_client2_dog1}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"dogs",
+						"{{user2_client2_dog1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify user2's client2's dog exists and has appointment",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"returned user 2 client 2 dog 1: code 200\"] = responseCode.code === 200;",
+							"",
+							"body = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user2_client2_dog1\",body.id);",
+							"",
+							"tests[\"verify owner\"] = body.owner === environment.user2_client2;",
+							"tests[\"verify name\"] = body.name === \"Chomper\";",
+							"tests[\"verify age\"] = body.age === 5;",
+							"tests[\"verify gender\"] = body.gender === \"m_i\";",
+							"tests[\"verify breed\"] = body.breed === \"Chihuauha\";",
+							"tests[\"verify appointment\"] = body.appointment === \"Weekday Mornings\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user2_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/dogs/{{user2_client2_dog1}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"dogs",
+						"{{user2_client2_dog1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try to access user 1's client as user 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"forbidden: code 403\"] = responseCode.code === 403;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user2_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/clients/{{user1_client1}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients",
+						"{{user1_client1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try to access user 2's client's dog as user 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"forbidden: code 403\"] = responseCode.code === 403;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user1_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/dogs/{{user2_client2_dog1}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"dogs",
+						"{{user2_client2_dog1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View user1's client1 and his dogs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"returned client 1 for user 1: code 200\"] = responseCode.code === 200;",
+							"",
+							"body = JSON.parse(responseBody);",
+							"",
+							"tests[\"returned user1 1 client 1\"] = body.id === environment.user1_client1;",
+							"tests[\"verify user 1's client 1 name\"] = body.name === \"Jason\";",
+							"tests[\"verify user 1's client 1 age\"] = body.age === 44;",
+							"tests[\"verify user 1's client 1 city\"] = body.city === \"Sacramento\";",
+							"tests[\"verify user 1's client 1 recurring status\"] = body.recurring_client === true;",
+							"tests[\"verify user1's client1's dog1\"] = responseBody.has(environment.user1_client1_dog1)",
+							"tests[\"verify user1's client1's dog2\"] = responseBody.has(environment.user1_client1_dog2)",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user1_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/clients/{{user1_client1}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients",
+						"{{user1_client1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View user2's client2 and his dogs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"returned user 2's client 2: code 200\"] = responseCode.code === 200;",
+							"",
+							"body = JSON.parse(responseBody);",
+							"",
+							"tests[\"returned user 2's client 2\"] = body.id === environment.user2_client2;",
+							"tests[\"verify user 2's client 2 name\"] = body.name === \"Joseph\";",
+							"tests[\"verify user 2's client 2 age\"] = body.age ===25;",
+							"tests[\"verify user 2's client 2 city\"] = body.city === \"San Diego\";",
+							"tests[\"verify user 2's client 2 recurring status\"] = body.recurring_client === true;",
+							"",
+							"tests[\"verify user2's client2's dog\"] = responseBody.has(environment.user2_client2_dog1)",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user2_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/clients/{{user2_client2}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients",
+						"{{user2_client2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit user1's client1's information",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"edit a client's information: code 204\"] = responseCode.code === 204;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user1_token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Jason\",\n\t\"city\":\"Miami\",\n\t\"age\": 55\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/clients/{{user1_client1}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients",
+						"{{user1_client1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify user1's client1 info properly modified",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"returned client 1 for user 1: code 200\"] = responseCode.code === 200;",
+							"",
+							"body = JSON.parse(responseBody);",
+							"",
+							"tests[\"returned user1 1 client 1\"] = body.id === environment.user1_client1;",
+							"tests[\"verify user 1's client 1 name\"] = body.name === \"Jason\";",
+							"tests[\"verify user 1's client 1 age changed\"] = body.age === 55;",
+							"tests[\"verify user 1's client 1 city changed\"] = body.city === \"Miami\";",
+							"tests[\"verify user 1's client 1 recurring status\"] = body.recurring_client === true;",
+							"tests[\"verify user1's client1's dog1\"] = responseBody.has(environment.user1_client1_dog1)",
+							"tests[\"verify user1's client1's dog2\"] = responseBody.has(environment.user1_client1_dog2)",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user1_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/clients/{{user1_client1}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients",
+						"{{user1_client1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit user2's client2's dog's information",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"edit a dog's information: code 204\"] = responseCode.code === 204;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user2_token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Chomperz\",\n\t\"age\":6,\n\t\"gender\":\"m_n\"\n}"
+				},
+				"url": {
+					"raw": "{{URL}}/dogs/{{user2_client2_dog1}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"dogs",
+						"{{user2_client2_dog1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify user2's client2's dog's information changed",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"returned dog's information: code 200\"] = responseCode.code === 200;",
+							"",
+							"body = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"user2_client2_dog1\",body.id);",
+							"",
+							"tests[\"verify owner unchanged\"] = body.owner === environment.user2_client2;",
+							"tests[\"verify name change\"] = body.name === \"Chomperz\";",
+							"tests[\"verify age change\"] = body.age === 6;",
+							"tests[\"verify gender change\"] = body.gender === \"m_n\";",
+							"tests[\"verify breed unchanged\"] = body.breed === \"Chihuauha\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user2_token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{URL}}/dogs/{{user2_client2_dog1}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"dogs",
+						"{{user2_client2_dog1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Try to Delete user2's client2's dog",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"user2's client2's dog cannot be deleted: code 405\"] = responseCode.code === 405;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user2_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/dogs/{{user2_client2_dog1}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"dogs",
+						"{{user2_client2_dog1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user 1 client 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"delete user 1's client 1: code 204\"] = responseCode.code === 204;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user1_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/clients/{{user1_client1}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients",
+						"{{user1_client1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user 1 client 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"delete user 1's client 2: code 204\"] = responseCode.code === 204;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user1_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/clients/{{user1_client2}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients",
+						"{{user1_client2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user 2 client 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"delete user 2's client 1: code 204\"] = responseCode.code === 204;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user2_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/clients/{{user2_client1}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients",
+						"{{user2_client1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user 2 client 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"delete user 2's client 2: code 204\"] = responseCode.code === 204;",
+							"",
+							"tests[\"Content-Type is present\"] = postman.getResponseHeader(\"Content-Type\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user2_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/clients/{{user2_client2}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"clients",
+						"{{user2_client2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify user 1 client 1 deleted",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"user1 person1 not found: code 404\"] = responseCode.code === 404;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user1_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/people/{{user1_client1}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"people",
+						"{{user1_client1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify user1's client1's dog 1 Deleted",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"dog 1 not found: code 404\"] = responseCode.code === 404;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user1_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/dogs/{{user1_client1_dog1}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"dogs",
+						"{{user1_client1_dog1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify user1's client1's dog 2 Deleted",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"dog 2 not found: code 404\"] = responseCode.code === 404;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id_token",
+						"value": "{{user1_token}}"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{URL}}/dogs/{{user1_client1_dog2}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"dogs",
+						"{{user1_client1_dog2}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,2708 @@
+{
+	"id": "eab9d772-c061-4174-a95c-2b9bbd01dd2b",
+	"name": "CS496 Final",
+	"allTests": [],
+	"timestamp": "2017-11-23T22:44:04.739Z",
+	"collection_id": "3f82e41a-39d3-9df8-37b4-b537067ea26c",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "77e036f4-88a2-2c7f-a35c-e16dd69b8e71",
+	"data": [],
+	"delay": "1000",
+	"count": 1,
+	"collection": {
+		"id": "3f82e41a-39d3-9df8-37b4-b537067ea26c",
+		"name": "CS496 Final",
+		"description": "",
+		"order": [
+			"74f5f965-c780-ce7f-406d-8acd5b6006e9",
+			"5d88f83d-5e63-3c14-071e-79cd60706e82",
+			"d40e6d22-2cbc-d029-da68-3475803a4db3",
+			"d261d1b8-228c-4062-43e3-376b078d6c9b",
+			"673d095e-f811-547b-549d-5b490cfc7c76",
+			"539c7a34-92e8-9cd3-3c2f-f4dd48e49db4",
+			"d58a73d3-fdd0-1be1-40d4-f38e50ed42cf",
+			"02934559-e1f7-dc5d-1c29-e64ff492185d",
+			"43e46ab0-1186-92e7-38a9-d10bc4357184",
+			"1ce4d693-cc76-4b60-9482-6bc3efb34187",
+			"239a2e70-bbc1-ff5e-6514-dc93062d0e29",
+			"f1c82a57-6e2f-a270-4301-641891f3bf36",
+			"fa64d20c-d59d-74b1-09b7-688074edfbba",
+			"7baac3e8-cd6f-6bc6-c9d1-89cbec4124c9",
+			"77cf71b5-a691-1b90-9992-08c385c63fa6",
+			"b640bc51-e488-7c5f-68bb-8e293fbb85cf",
+			"9a6f660c-4026-c772-7f8e-7ca6b0282fa9",
+			"df3c57cd-1821-000e-20d6-9dcf140361a1",
+			"af3f94be-2a5d-6612-5fb8-2e8c5009ef86",
+			"d184a490-7e3b-cd48-083b-79edd60042d7",
+			"30b372e7-a6f7-11ae-d2b5-4e263edeff5c",
+			"859d45ff-b285-a5fa-d650-38a4bec2fc04",
+			"35dd1a92-b1a3-5357-73cb-865c5947f6fd",
+			"aa51dc78-ba7d-07ab-92f3-ee8cf44902b8",
+			"dde7301e-105d-eaee-06e4-5cde14f44cbc",
+			"f1b6ab68-1844-58f4-7fba-1ddf05d79efa",
+			"6de320db-a94f-0d77-2493-8d6c78c1d600",
+			"dacc55be-a44a-11cb-cc8e-c03a3c30bae6",
+			"769891b0-b8b9-f388-295f-c88198b98a9f",
+			"bae9dead-b237-0417-d09f-a7f10a441381",
+			"25a42cf2-2f80-97a8-169c-e527bdb7ff1e",
+			"2a74ed33-d341-735c-1a7d-b5ee3410bda6",
+			"9138181a-f836-d685-6721-1f93e7d91abe"
+		],
+		"folders": [],
+		"folders_order": [],
+		"timestamp": 0,
+		"synced": true,
+		"remote_id": 0,
+		"owner": "2808890",
+		"sharedWithTeam": false,
+		"subscribed": false,
+		"remoteLink": "",
+		"remoteLinkUpdatedAt": null,
+		"public": false,
+		"createdAt": 1511378226462,
+		"updatedAt": "2017-11-23T22:37:25.686Z",
+		"write": true,
+		"published": false,
+		"favorite": false,
+		"permissions": {},
+		"syncedPermissions": {}
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"enabled": true,
+			"key": "numGists",
+			"type": "text",
+			"value": ""
+		},
+		{
+			"enabled": true,
+			"key": "\"id\"",
+			"type": "text",
+			"value": ""
+		}
+	],
+	"results": [
+		{
+			"name": "Add a  client without a user token",
+			"id": "74f5f965-c780-ce7f-406d-8acd5b6006e9",
+			"url": "https://final-project-186875.appspot.com/clients",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"tests": {
+				"post with no user token: code 403": true
+			},
+			"testPassFailCounts": {
+				"post with no user token: code 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"2484"
+			],
+			"allTests": [
+				{
+					"post with no user token: code 403": true
+				}
+			],
+			"time": "2484",
+			"totalRequestTime": "2484",
+			"iterationResults": {}
+		},
+		{
+			"name": "Add Client 1 for user 1",
+			"id": "5d88f83d-5e63-3c14-071e-79cd60706e82",
+			"url": "https://final-project-186875.appspot.com/clients",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"user1's client1 added: code 200": true,
+				"verify name": true,
+				"verify age": true,
+				"verify city": true,
+				"verify recurring client status": true
+			},
+			"testPassFailCounts": {
+				"user1's client1 added: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify city": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify recurring client status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"768"
+			],
+			"allTests": [
+				{
+					"user1's client1 added: code 200": true,
+					"verify name": true,
+					"verify age": true,
+					"verify city": true,
+					"verify recurring client status": true
+				}
+			],
+			"time": "768",
+			"totalRequestTime": "768",
+			"iterationResults": {}
+		},
+		{
+			"name": "Add CLient 2 for user 1",
+			"id": "d40e6d22-2cbc-d029-da68-3475803a4db3",
+			"url": "https://final-project-186875.appspot.com/clients",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"user1_client2 added: code 200": true,
+				"verify name": true,
+				"verify city": true,
+				"verify age": true,
+				"verify recurring client status": true
+			},
+			"testPassFailCounts": {
+				"user1_client2 added: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify city": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify recurring client status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"559"
+			],
+			"allTests": [
+				{
+					"user1_client2 added: code 200": true,
+					"verify name": true,
+					"verify city": true,
+					"verify age": true,
+					"verify recurring client status": true
+				}
+			],
+			"time": "559",
+			"totalRequestTime": "559",
+			"iterationResults": {}
+		},
+		{
+			"name": "Make user 1's client 1 a recurring client",
+			"id": "d261d1b8-228c-4062-43e3-376b078d6c9b",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvzhwoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"make user 1 client 1 a recurring client: code 204": true
+			},
+			"testPassFailCounts": {
+				"make user 1 client 1 a recurring client: code 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"556"
+			],
+			"allTests": [
+				{
+					"make user 1 client 1 a recurring client: code 204": true
+				}
+			],
+			"time": "556",
+			"totalRequestTime": "556",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get all of user 1's clients",
+			"id": "673d095e-f811-547b-549d-5b490cfc7c76",
+			"url": "https://final-project-186875.appspot.com/clients",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"returned both clients: code 200": true,
+				"contains user 1's client 1": true,
+				"contains user 1's client 2": true
+			},
+			"testPassFailCounts": {
+				"returned both clients: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"contains user 1's client 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"contains user 1's client 2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"365"
+			],
+			"allTests": [
+				{
+					"returned both clients: code 200": true,
+					"contains user 1's client 1": true,
+					"contains user 1's client 2": true
+				}
+			],
+			"time": "365",
+			"totalRequestTime": "365",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get client 1 from user 1",
+			"id": "539c7a34-92e8-9cd3-3c2f-f4dd48e49db4",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvzhwoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"returned client 1 for user 1: code 200": true,
+				"returned user1 person1": true,
+				"verify user 1's client 1 name": true,
+				"verify user 1's client 1 age": true,
+				"verify user 1's client 1 city": true,
+				"verify user 1's client 1 recurring status": true
+			},
+			"testPassFailCounts": {
+				"returned client 1 for user 1: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"returned user1 person1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 city": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 recurring status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"249"
+			],
+			"allTests": [
+				{
+					"returned client 1 for user 1: code 200": true,
+					"returned user1 person1": true,
+					"verify user 1's client 1 name": true,
+					"verify user 1's client 1 age": true,
+					"verify user 1's client 1 city": true,
+					"verify user 1's client 1 recurring status": true
+				}
+			],
+			"time": "249",
+			"totalRequestTime": "249",
+			"iterationResults": {}
+		},
+		{
+			"name": "Add Client 1 for user 2",
+			"id": "d58a73d3-fdd0-1be1-40d4-f38e50ed42cf",
+			"url": "https://final-project-186875.appspot.com/clients",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"user1's client1 added: code 200": true,
+				"verify name": true,
+				"verify age": true,
+				"verify city": true,
+				"verify recurring client status": true
+			},
+			"testPassFailCounts": {
+				"user1's client1 added: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify city": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify recurring client status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"479"
+			],
+			"allTests": [
+				{
+					"user1's client1 added: code 200": true,
+					"verify name": true,
+					"verify age": true,
+					"verify city": true,
+					"verify recurring client status": true
+				}
+			],
+			"time": "479",
+			"totalRequestTime": "479",
+			"iterationResults": {}
+		},
+		{
+			"name": "Add client 2 for user 2",
+			"id": "02934559-e1f7-dc5d-1c29-e64ff492185d",
+			"url": "https://final-project-186875.appspot.com/clients",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"user1_client2 added: code 200": true,
+				"verify name": true,
+				"verify city": true,
+				"verify age": true,
+				"verify recurring client status": true
+			},
+			"testPassFailCounts": {
+				"user1_client2 added: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify city": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify recurring client status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"363"
+			],
+			"allTests": [
+				{
+					"user1_client2 added: code 200": true,
+					"verify name": true,
+					"verify city": true,
+					"verify age": true,
+					"verify recurring client status": true
+				}
+			],
+			"time": "363",
+			"totalRequestTime": "363",
+			"iterationResults": {}
+		},
+		{
+			"name": "Make user 2's client 2 a recurring client",
+			"id": "43e46ab0-1186-92e7-38a9-d10bc4357184",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgOu4jwoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"make user 2 client 2 a recurring client: code 204": true
+			},
+			"testPassFailCounts": {
+				"make user 2 client 2 a recurring client: code 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"431"
+			],
+			"allTests": [
+				{
+					"make user 2 client 2 a recurring client: code 204": true
+				}
+			],
+			"time": "431",
+			"totalRequestTime": "431",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get all of user 2's clients",
+			"id": "1ce4d693-cc76-4b60-9482-6bc3efb34187",
+			"url": "https://final-project-186875.appspot.com/clients",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"returned both clients: code 200": true,
+				"contains user 2's client 1": true,
+				"contains user 2's client 2": true
+			},
+			"testPassFailCounts": {
+				"returned both clients: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"contains user 2's client 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"contains user 2's client 2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"295"
+			],
+			"allTests": [
+				{
+					"returned both clients: code 200": true,
+					"contains user 2's client 1": true,
+					"contains user 2's client 2": true
+				}
+			],
+			"time": "295",
+			"totalRequestTime": "295",
+			"iterationResults": {}
+		},
+		{
+			"name": "Get client 2 from user 2",
+			"id": "239a2e70-bbc1-ff5e-6514-dc93062d0e29",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgOu4jwoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"returned user 2's client 2: code 200": true,
+				"returned user1 person1": true,
+				"verify user 2's client 2 name": true,
+				"verify user 2's client 2 age": true,
+				"verify user 2's client 2 city": true,
+				"verify user 2's client 2 recurring status": true
+			},
+			"testPassFailCounts": {
+				"returned user 2's client 2: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"returned user1 person1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 2's client 2 name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 2's client 2 age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 2's client 2 city": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 2's client 2 recurring status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"281"
+			],
+			"allTests": [
+				{
+					"returned user 2's client 2: code 200": true,
+					"returned user1 person1": true,
+					"verify user 2's client 2 name": true,
+					"verify user 2's client 2 age": true,
+					"verify user 2's client 2 city": true,
+					"verify user 2's client 2 recurring status": true
+				}
+			],
+			"time": "281",
+			"totalRequestTime": "281",
+			"iterationResults": {}
+		},
+		{
+			"name": "Add a dog without a user token",
+			"id": "f1c82a57-6e2f-a270-4301-641891f3bf36",
+			"url": "https://final-project-186875.appspot.com/dogs",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"tests": {
+				"post with no user token: code 403": true
+			},
+			"testPassFailCounts": {
+				"post with no user token: code 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"81"
+			],
+			"allTests": [
+				{
+					"post with no user token: code 403": true
+				}
+			],
+			"time": "81",
+			"totalRequestTime": "81",
+			"iterationResults": {}
+		},
+		{
+			"name": "Add a dog to user1's client 1",
+			"id": "fa64d20c-d59d-74b1-09b7-688074edfbba",
+			"url": "https://final-project-186875.appspot.com/dogs",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"new dog created: code 200": true,
+				"verify owner": true,
+				"verify name": true,
+				"verify age": true,
+				"verify gender": true,
+				"verify breed": true,
+				"verify appointment": true
+			},
+			"testPassFailCounts": {
+				"new dog created: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify owner": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify gender": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify breed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify appointment": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"514"
+			],
+			"allTests": [
+				{
+					"new dog created: code 200": true,
+					"verify owner": true,
+					"verify name": true,
+					"verify age": true,
+					"verify gender": true,
+					"verify breed": true,
+					"verify appointment": true
+				}
+			],
+			"time": "514",
+			"totalRequestTime": "514",
+			"iterationResults": {}
+		},
+		{
+			"name": "Add a  second dog to user1's client 1",
+			"id": "7baac3e8-cd6f-6bc6-c9d1-89cbec4124c9",
+			"url": "https://final-project-186875.appspot.com/dogs",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"new dog created: code 200": true,
+				"verify owner": true,
+				"verify name": true,
+				"verify age": true,
+				"verify gender": true,
+				"verify breed": true,
+				"verify appointment": true
+			},
+			"testPassFailCounts": {
+				"new dog created: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify owner": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify gender": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify breed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify appointment": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"592"
+			],
+			"allTests": [
+				{
+					"new dog created: code 200": true,
+					"verify owner": true,
+					"verify name": true,
+					"verify age": true,
+					"verify gender": true,
+					"verify breed": true,
+					"verify appointment": true
+				}
+			],
+			"time": "592",
+			"totalRequestTime": "592",
+			"iterationResults": {}
+		},
+		{
+			"name": "Add a dog to user2's client 2",
+			"id": "77cf71b5-a691-1b90-9992-08c385c63fa6",
+			"url": "https://final-project-186875.appspot.com/dogs",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"new dog created: code 200": true,
+				"verify owner": true,
+				"verify name": true,
+				"verify age": true,
+				"verify gender": true,
+				"verify breed": true,
+				"verify appointment": true
+			},
+			"testPassFailCounts": {
+				"new dog created: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify owner": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify gender": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify breed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify appointment": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"459"
+			],
+			"allTests": [
+				{
+					"new dog created: code 200": true,
+					"verify owner": true,
+					"verify name": true,
+					"verify age": true,
+					"verify gender": true,
+					"verify breed": true,
+					"verify appointment": true
+				}
+			],
+			"time": "459",
+			"totalRequestTime": "459",
+			"iterationResults": {}
+		},
+		{
+			"name": "Make an appointment for user2's client2's dog",
+			"id": "b640bc51-e488-7c5f-68bb-8e293fbb85cf",
+			"url": "https://final-project-186875.appspot.com/dogs/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1cjELEgNEb2ciGHUnMTAyNzY1NjczNzgyOTA4MDA2OTY0JwwLEgNEb2cYgICAgICAgAoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"Make An appointment for a dog: code 204": true
+			},
+			"testPassFailCounts": {
+				"Make An appointment for a dog: code 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"432"
+			],
+			"allTests": [
+				{
+					"Make An appointment for a dog: code 204": true
+				}
+			],
+			"time": "432",
+			"totalRequestTime": "432",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify user2's client2's dog exists and has appointment",
+			"id": "9a6f660c-4026-c772-7f8e-7ca6b0282fa9",
+			"url": "https://final-project-186875.appspot.com/dogs/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1cjELEgNEb2ciGHUnMTAyNzY1NjczNzgyOTA4MDA2OTY0JwwLEgNEb2cYgICAgICAgAoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"returned user 2 client 2 dog 1: code 200": true,
+				"verify owner": true,
+				"verify name": true,
+				"verify age": true,
+				"verify gender": true,
+				"verify breed": true,
+				"verify appointment": true
+			},
+			"testPassFailCounts": {
+				"returned user 2 client 2 dog 1: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify owner": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify gender": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify breed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify appointment": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"337"
+			],
+			"allTests": [
+				{
+					"returned user 2 client 2 dog 1: code 200": true,
+					"verify owner": true,
+					"verify name": true,
+					"verify age": true,
+					"verify gender": true,
+					"verify breed": true,
+					"verify appointment": true
+				}
+			],
+			"time": "337",
+			"totalRequestTime": "337",
+			"iterationResults": {}
+		},
+		{
+			"name": "Try to access user 1's client as user 2",
+			"id": "df3c57cd-1821-000e-20d6-9dcf140361a1",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvzhwoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"tests": {
+				"forbidden: code 403": true
+			},
+			"testPassFailCounts": {
+				"forbidden: code 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"433"
+			],
+			"allTests": [
+				{
+					"forbidden: code 403": true
+				}
+			],
+			"time": "433",
+			"totalRequestTime": "433",
+			"iterationResults": {}
+		},
+		{
+			"name": "Try to access user 2's client's dog as user 1",
+			"id": "af3f94be-2a5d-6612-5fb8-2e8c5009ef86",
+			"url": "https://final-project-186875.appspot.com/dogs/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1cjELEgNEb2ciGHUnMTAyNzY1NjczNzgyOTA4MDA2OTY0JwwLEgNEb2cYgICAgICAgAoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"tests": {
+				"forbidden: code 403": true
+			},
+			"testPassFailCounts": {
+				"forbidden: code 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"355"
+			],
+			"allTests": [
+				{
+					"forbidden: code 403": true
+				}
+			],
+			"time": "355",
+			"totalRequestTime": "355",
+			"iterationResults": {}
+		},
+		{
+			"name": "View user1's client1 and his dogs",
+			"id": "d184a490-7e3b-cd48-083b-79edd60042d7",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvzhwoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"returned client 1 for user 1: code 200": true,
+				"returned user1 1 client 1": true,
+				"verify user 1's client 1 name": true,
+				"verify user 1's client 1 age": true,
+				"verify user 1's client 1 city": true,
+				"verify user 1's client 1 recurring status": true,
+				"verify user1's client1's dog1": true,
+				"verify user1's client1's dog2": true
+			},
+			"testPassFailCounts": {
+				"returned client 1 for user 1: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"returned user1 1 client 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 city": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 recurring status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user1's client1's dog1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user1's client1's dog2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"383"
+			],
+			"allTests": [
+				{
+					"returned client 1 for user 1: code 200": true,
+					"returned user1 1 client 1": true,
+					"verify user 1's client 1 name": true,
+					"verify user 1's client 1 age": true,
+					"verify user 1's client 1 city": true,
+					"verify user 1's client 1 recurring status": true,
+					"verify user1's client1's dog1": true,
+					"verify user1's client1's dog2": true
+				}
+			],
+			"time": "383",
+			"totalRequestTime": "383",
+			"iterationResults": {}
+		},
+		{
+			"name": "View user2's client2 and his dogs",
+			"id": "30b372e7-a6f7-11ae-d2b5-4e263edeff5c",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgOu4jwoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"returned user 2's client 2: code 200": true,
+				"returned user 2's client 2": true,
+				"verify user 2's client 2 name": true,
+				"verify user 2's client 2 age": true,
+				"verify user 2's client 2 city": true,
+				"verify user 2's client 2 recurring status": true,
+				"verify user2's client2's dog": true
+			},
+			"testPassFailCounts": {
+				"returned user 2's client 2: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"returned user 2's client 2": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 2's client 2 name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 2's client 2 age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 2's client 2 city": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 2's client 2 recurring status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user2's client2's dog": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"388"
+			],
+			"allTests": [
+				{
+					"returned user 2's client 2: code 200": true,
+					"returned user 2's client 2": true,
+					"verify user 2's client 2 name": true,
+					"verify user 2's client 2 age": true,
+					"verify user 2's client 2 city": true,
+					"verify user 2's client 2 recurring status": true,
+					"verify user2's client2's dog": true
+				}
+			],
+			"time": "388",
+			"totalRequestTime": "388",
+			"iterationResults": {}
+		},
+		{
+			"name": "Edit user1's client1's information",
+			"id": "859d45ff-b285-a5fa-d650-38a4bec2fc04",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvzhwoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"edit a client's information: code 204": true
+			},
+			"testPassFailCounts": {
+				"edit a client's information: code 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"342"
+			],
+			"allTests": [
+				{
+					"edit a client's information: code 204": true
+				}
+			],
+			"time": "342",
+			"totalRequestTime": "342",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify user1's client1 info properly modified",
+			"id": "35dd1a92-b1a3-5357-73cb-865c5947f6fd",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvzhwoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"returned client 1 for user 1: code 200": true,
+				"returned user1 1 client 1": true,
+				"verify user 1's client 1 name": true,
+				"verify user 1's client 1 age changed": true,
+				"verify user 1's client 1 city changed": true,
+				"verify user 1's client 1 recurring status": true,
+				"verify user1's client1's dog1": true,
+				"verify user1's client1's dog2": true
+			},
+			"testPassFailCounts": {
+				"returned client 1 for user 1: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"returned user1 1 client 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 age changed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 city changed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 recurring status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user1's client1's dog1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user1's client1's dog2": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"384"
+			],
+			"allTests": [
+				{
+					"returned client 1 for user 1: code 200": true,
+					"returned user1 1 client 1": true,
+					"verify user 1's client 1 name": true,
+					"verify user 1's client 1 age changed": true,
+					"verify user 1's client 1 city changed": true,
+					"verify user 1's client 1 recurring status": true,
+					"verify user1's client1's dog1": true,
+					"verify user1's client1's dog2": true
+				}
+			],
+			"time": "384",
+			"totalRequestTime": "384",
+			"iterationResults": {}
+		},
+		{
+			"name": "Edit user2's client2's dog's information",
+			"id": "aa51dc78-ba7d-07ab-92f3-ee8cf44902b8",
+			"url": "https://final-project-186875.appspot.com/dogs/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1cjELEgNEb2ciGHUnMTAyNzY1NjczNzgyOTA4MDA2OTY0JwwLEgNEb2cYgICAgICAgAoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"edit a dog's information: code 204": true
+			},
+			"testPassFailCounts": {
+				"edit a dog's information: code 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"418"
+			],
+			"allTests": [
+				{
+					"edit a dog's information: code 204": true
+				}
+			],
+			"time": "418",
+			"totalRequestTime": "418",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify user2's client2's dog's information changed",
+			"id": "dde7301e-105d-eaee-06e4-5cde14f44cbc",
+			"url": "https://final-project-186875.appspot.com/dogs/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1cjELEgNEb2ciGHUnMTAyNzY1NjczNzgyOTA4MDA2OTY0JwwLEgNEb2cYgICAgICAgAoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"returned dog's information: code 200": true,
+				"verify owner unchanged": true,
+				"verify name change": true,
+				"verify age change": true,
+				"verify gender change": true,
+				"verify breed unchanged": true
+			},
+			"testPassFailCounts": {
+				"returned dog's information: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify owner unchanged": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name change": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age change": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify gender change": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify breed unchanged": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"293"
+			],
+			"allTests": [
+				{
+					"returned dog's information: code 200": true,
+					"verify owner unchanged": true,
+					"verify name change": true,
+					"verify age change": true,
+					"verify gender change": true,
+					"verify breed unchanged": true
+				}
+			],
+			"time": "293",
+			"totalRequestTime": "293",
+			"iterationResults": {}
+		},
+		{
+			"name": "Try to Delete user2's client2's dog",
+			"id": "f1b6ab68-1844-58f4-7fba-1ddf05d79efa",
+			"url": "https://final-project-186875.appspot.com/dogs/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1cjELEgNEb2ciGHUnMTAyNzY1NjczNzgyOTA4MDA2OTY0JwwLEgNEb2cYgICAgICAgAoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed",
+				"detail": {
+					"name": "Method Not Allowed",
+					"detail": "A request was made of a resource using a request method not supported by that resource; for example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource."
+				}
+			},
+			"tests": {
+				"user2's client2's dog cannot be deleted: code 405": true
+			},
+			"testPassFailCounts": {
+				"user2's client2's dog cannot be deleted: code 405": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"83"
+			],
+			"allTests": [
+				{
+					"user2's client2's dog cannot be deleted: code 405": true
+				}
+			],
+			"time": "83",
+			"totalRequestTime": "83",
+			"iterationResults": {}
+		},
+		{
+			"name": "Delete user 1 client 1",
+			"id": "6de320db-a94f-0d77-2493-8d6c78c1d600",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvzhwoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"delete user 1's client 1: code 204": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"delete user 1's client 1: code 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"462"
+			],
+			"allTests": [
+				{
+					"delete user 1's client 1: code 204": true,
+					"Content-Type is present": true
+				}
+			],
+			"time": "462",
+			"totalRequestTime": "462",
+			"iterationResults": {}
+		},
+		{
+			"name": "Delete user 1 client 2",
+			"id": "dacc55be-a44a-11cb-cc8e-c03a3c30bae6",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvvlgoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"delete user 1's client 2: code 204": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"delete user 1's client 2: code 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"484"
+			],
+			"allTests": [
+				{
+					"delete user 1's client 2: code 204": true,
+					"Content-Type is present": true
+				}
+			],
+			"time": "484",
+			"totalRequestTime": "484",
+			"iterationResults": {}
+		},
+		{
+			"name": "Delete user 2 client 1",
+			"id": "769891b0-b8b9-f388-295f-c88198b98a9f",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgICumQoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"delete user 2's client 1: code 204": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"delete user 2's client 1: code 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"353"
+			],
+			"allTests": [
+				{
+					"delete user 2's client 1: code 204": true,
+					"Content-Type is present": true
+				}
+			],
+			"time": "353",
+			"totalRequestTime": "353",
+			"iterationResults": {}
+		},
+		{
+			"name": "Delete user 2 client 2",
+			"id": "bae9dead-b237-0417-d09f-a7f10a441381",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgOu4jwoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"delete user 2's client 2: code 204": true,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"delete user 2's client 2: code 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"403"
+			],
+			"allTests": [
+				{
+					"delete user 2's client 2: code 204": true,
+					"Content-Type is present": true
+				}
+			],
+			"time": "403",
+			"totalRequestTime": "403",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify user 1 client 1 deleted",
+			"id": "25a42cf2-2f80-97a8-169c-e527bdb7ff1e",
+			"url": "https://final-project-186875.appspot.com/people/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvzhwoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"user1 person1 not found: code 404": true
+			},
+			"testPassFailCounts": {
+				"user1 person1 not found: code 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"82"
+			],
+			"allTests": [
+				{
+					"user1 person1 not found: code 404": true
+				}
+			],
+			"time": "82",
+			"totalRequestTime": "82",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify user1's client1's dog 1 Deleted",
+			"id": "2a74ed33-d341-735c-1a7d-b5ee3410bda6",
+			"url": "https://final-project-186875.appspot.com/dogs/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1cjELEgNEb2ciGHUnMTEwNDc5MjIwMzA0MDg2NTA5MDcwJwwLEgNEb2cYgICAgICAgAoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"dog 1 not found: code 404": true
+			},
+			"testPassFailCounts": {
+				"dog 1 not found: code 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"268"
+			],
+			"allTests": [
+				{
+					"dog 1 not found: code 404": true
+				}
+			],
+			"time": "268",
+			"totalRequestTime": "268",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify user1's client1's dog 2 Deleted",
+			"id": "9138181a-f836-d685-6721-1f93e7d91abe",
+			"url": "https://final-project-186875.appspot.com/dogs/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1cjELEgNEb2ciGHUnMTEwNDc5MjIwMzA0MDg2NTA5MDcwJwwLEgNEb2cYgICAgIDkkQoM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"dog 2 not found: code 404": true
+			},
+			"testPassFailCounts": {
+				"dog 2 not found: code 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"282"
+			],
+			"allTests": [
+				{
+					"dog 2 not found: code 404": true
+				}
+			],
+			"time": "282",
+			"totalRequestTime": "282",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 116,
+	"totalFail": 0,
+	"totalTime": 14658,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "Add a  client without a user token",
+			"id": "74f5f965-c780-ce7f-406d-8acd5b6006e9",
+			"url": "https://final-project-186875.appspot.com/clients",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"testPassFailCounts": {
+				"post with no user token: code 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Add Client 1 for user 1",
+			"id": "5d88f83d-5e63-3c14-071e-79cd60706e82",
+			"url": "https://final-project-186875.appspot.com/clients",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"user1's client1 added: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify city": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify recurring client status": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Add CLient 2 for user 1",
+			"id": "d40e6d22-2cbc-d029-da68-3475803a4db3",
+			"url": "https://final-project-186875.appspot.com/clients",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"user1_client2 added: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify city": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify recurring client status": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Make user 1's client 1 a recurring client",
+			"id": "d261d1b8-228c-4062-43e3-376b078d6c9b",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvzhwoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"make user 1 client 1 a recurring client: code 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get all of user 1's clients",
+			"id": "673d095e-f811-547b-549d-5b490cfc7c76",
+			"url": "https://final-project-186875.appspot.com/clients",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"returned both clients: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"contains user 1's client 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"contains user 1's client 2": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get client 1 from user 1",
+			"id": "539c7a34-92e8-9cd3-3c2f-f4dd48e49db4",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvzhwoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"returned client 1 for user 1: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"returned user1 person1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 city": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 recurring status": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Add Client 1 for user 2",
+			"id": "d58a73d3-fdd0-1be1-40d4-f38e50ed42cf",
+			"url": "https://final-project-186875.appspot.com/clients",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"user1's client1 added: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify city": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify recurring client status": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Add client 2 for user 2",
+			"id": "02934559-e1f7-dc5d-1c29-e64ff492185d",
+			"url": "https://final-project-186875.appspot.com/clients",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"user1_client2 added: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify city": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify recurring client status": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Make user 2's client 2 a recurring client",
+			"id": "43e46ab0-1186-92e7-38a9-d10bc4357184",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgOu4jwoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"make user 2 client 2 a recurring client: code 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get all of user 2's clients",
+			"id": "1ce4d693-cc76-4b60-9482-6bc3efb34187",
+			"url": "https://final-project-186875.appspot.com/clients",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"returned both clients: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"contains user 2's client 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"contains user 2's client 2": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Get client 2 from user 2",
+			"id": "239a2e70-bbc1-ff5e-6514-dc93062d0e29",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgOu4jwoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"returned user 2's client 2: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"returned user1 person1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 2's client 2 name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 2's client 2 age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 2's client 2 city": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 2's client 2 recurring status": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Add a dog without a user token",
+			"id": "f1c82a57-6e2f-a270-4301-641891f3bf36",
+			"url": "https://final-project-186875.appspot.com/dogs",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"testPassFailCounts": {
+				"post with no user token: code 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Add a dog to user1's client 1",
+			"id": "fa64d20c-d59d-74b1-09b7-688074edfbba",
+			"url": "https://final-project-186875.appspot.com/dogs",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"new dog created: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify owner": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify gender": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify breed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify appointment": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Add a  second dog to user1's client 1",
+			"id": "7baac3e8-cd6f-6bc6-c9d1-89cbec4124c9",
+			"url": "https://final-project-186875.appspot.com/dogs",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"new dog created: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify owner": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify gender": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify breed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify appointment": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Add a dog to user2's client 2",
+			"id": "77cf71b5-a691-1b90-9992-08c385c63fa6",
+			"url": "https://final-project-186875.appspot.com/dogs",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"new dog created: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify owner": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify gender": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify breed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify appointment": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Make an appointment for user2's client2's dog",
+			"id": "b640bc51-e488-7c5f-68bb-8e293fbb85cf",
+			"url": "https://final-project-186875.appspot.com/dogs/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1cjELEgNEb2ciGHUnMTAyNzY1NjczNzgyOTA4MDA2OTY0JwwLEgNEb2cYgICAgICAgAoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"Make An appointment for a dog: code 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Verify user2's client2's dog exists and has appointment",
+			"id": "9a6f660c-4026-c772-7f8e-7ca6b0282fa9",
+			"url": "https://final-project-186875.appspot.com/dogs/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1cjELEgNEb2ciGHUnMTAyNzY1NjczNzgyOTA4MDA2OTY0JwwLEgNEb2cYgICAgICAgAoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"returned user 2 client 2 dog 1: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify owner": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify gender": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify breed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify appointment": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Try to access user 1's client as user 2",
+			"id": "df3c57cd-1821-000e-20d6-9dcf140361a1",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvzhwoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"testPassFailCounts": {
+				"forbidden: code 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Try to access user 2's client's dog as user 1",
+			"id": "af3f94be-2a5d-6612-5fb8-2e8c5009ef86",
+			"url": "https://final-project-186875.appspot.com/dogs/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1cjELEgNEb2ciGHUnMTAyNzY1NjczNzgyOTA4MDA2OTY0JwwLEgNEb2cYgICAgICAgAoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden",
+				"detail": {
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
+				}
+			},
+			"testPassFailCounts": {
+				"forbidden: code 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "View user1's client1 and his dogs",
+			"id": "d184a490-7e3b-cd48-083b-79edd60042d7",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvzhwoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"returned client 1 for user 1: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"returned user1 1 client 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 city": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 recurring status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user1's client1's dog1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user1's client1's dog2": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "View user2's client2 and his dogs",
+			"id": "30b372e7-a6f7-11ae-d2b5-4e263edeff5c",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgOu4jwoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"returned user 2's client 2: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"returned user 2's client 2": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 2's client 2 name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 2's client 2 age": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 2's client 2 city": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 2's client 2 recurring status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user2's client2's dog": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Edit user1's client1's information",
+			"id": "859d45ff-b285-a5fa-d650-38a4bec2fc04",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvzhwoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"edit a client's information: code 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Verify user1's client1 info properly modified",
+			"id": "35dd1a92-b1a3-5357-73cb-865c5947f6fd",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvzhwoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"returned client 1 for user 1: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"returned user1 1 client 1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 age changed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 city changed": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user 1's client 1 recurring status": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user1's client1's dog1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify user1's client1's dog2": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Edit user2's client2's dog's information",
+			"id": "aa51dc78-ba7d-07ab-92f3-ee8cf44902b8",
+			"url": "https://final-project-186875.appspot.com/dogs/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1cjELEgNEb2ciGHUnMTAyNzY1NjczNzgyOTA4MDA2OTY0JwwLEgNEb2cYgICAgICAgAoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"edit a dog's information: code 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Verify user2's client2's dog's information changed",
+			"id": "dde7301e-105d-eaee-06e4-5cde14f44cbc",
+			"url": "https://final-project-186875.appspot.com/dogs/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1cjELEgNEb2ciGHUnMTAyNzY1NjczNzgyOTA4MDA2OTY0JwwLEgNEb2cYgICAgICAgAoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"returned dog's information: code 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify owner unchanged": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify name change": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify age change": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify gender change": {
+					"pass": 1,
+					"fail": 0
+				},
+				"verify breed unchanged": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Try to Delete user2's client2's dog",
+			"id": "f1b6ab68-1844-58f4-7fba-1ddf05d79efa",
+			"url": "https://final-project-186875.appspot.com/dogs/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1cjELEgNEb2ciGHUnMTAyNzY1NjczNzgyOTA4MDA2OTY0JwwLEgNEb2cYgICAgICAgAoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 405,
+				"name": "Method Not Allowed",
+				"detail": {
+					"name": "Method Not Allowed",
+					"detail": "A request was made of a resource using a request method not supported by that resource; for example, using GET on a form which requires data to be presented via POST, or using PUT on a read-only resource."
+				}
+			},
+			"testPassFailCounts": {
+				"user2's client2's dog cannot be deleted: code 405": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Delete user 1 client 1",
+			"id": "6de320db-a94f-0d77-2493-8d6c78c1d600",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvzhwoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"delete user 1's client 1: code 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Delete user 1 client 2",
+			"id": "dacc55be-a44a-11cb-cc8e-c03a3c30bae6",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvvlgoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"delete user 1's client 2: code 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Delete user 2 client 1",
+			"id": "769891b0-b8b9-f388-295f-c88198b98a9f",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgICumQoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"delete user 2's client 1: code 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Delete user 2 client 2",
+			"id": "bae9dead-b237-0417-d09f-a7f10a441381",
+			"url": "https://final-project-186875.appspot.com/clients/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgOu4jwoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"delete user 2's client 2: code 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Verify user 1 client 1 deleted",
+			"id": "25a42cf2-2f80-97a8-169c-e527bdb7ff1e",
+			"url": "https://final-project-186875.appspot.com/people/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1chMLEgZQZXJzb24YgICAgKvzhwoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"user1 person1 not found: code 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Verify user1's client1's dog 1 Deleted",
+			"id": "2a74ed33-d341-735c-1a7d-b5ee3410bda6",
+			"url": "https://final-project-186875.appspot.com/dogs/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1cjELEgNEb2ciGHUnMTEwNDc5MjIwMzA0MDg2NTA5MDcwJwwLEgNEb2cYgICAgICAgAoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"dog 1 not found: code 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Verify user1's client1's dog 2 Deleted",
+			"id": "9138181a-f836-d685-6721-1f93e7d91abe",
+			"url": "https://final-project-186875.appspot.com/dogs/ahZzfmZpbmFsLXByb2plY3QtMTg2ODc1cjELEgNEb2ciGHUnMTEwNDc5MjIwMzA0MDg2NTA5MDcwJwwLEgNEb2cYgICAgIDkkQoM",
+			"time": "2017-11-23T22:44:04.739Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"dog 2 not found: code 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}
