@@ -96,21 +96,21 @@ Postman generated documentation is available [here](https://documenter.getpostma
           - ```city```: client’s city, string
           - ```recurring_client```: True or False, bool
  
- - Returns:
-     - Success:
-         - status code 204
-         - modified client instance JSON including:
-             - ```id```: client id
-             - ```name```: client’s name
-             - ```age```: client’s age
-             - ```city```: client’s city
-             - ```recurring_client```: True or False
-             - ```dogs```: list of user’s dogs
-             - ```self```: URL path to the client
-     - Failure:
-         - status code 403: unauthorized
-         - status code 404: unable to locate resource
-         - status code 400: bad request
+       - Returns:
+           - Success:
+               - status code 204
+               - modified client instance JSON including:
+                   - ```id```: client id
+                   - ```name```: client’s name
+                   - ```age```: client’s age
+                   - ```city```: client’s city
+                   - ```recurring_client```: True or False
+                   - ```dogs```: list of user’s dogs
+                   - ```self```: URL path to the client
+           - Failure:
+               - status code 403: unauthorized
+               - status code 404: unable to locate resource
+               - status code 400: bad request
 
 
 - ### ```PUT```
@@ -285,7 +285,7 @@ Postman generated documentation is available [here](https://documenter.getpostma
             - Failure:
                 - status code 403: unauthorized
                 - status code 404: unable to locate resource
-            - status code 400: bad request
+                - status code 400: bad request
 
 
 - ### ```DELETE```
